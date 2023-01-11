@@ -1,0 +1,11 @@
+$rem-base: 16px;
+
+:root {
+  --primary: #1f6db5;
+  --secondary: #5d686e;
+  --dark-secondary: #444c50;
+}
+
+$breakpoints: (
+  "xl": 1200px,
+);

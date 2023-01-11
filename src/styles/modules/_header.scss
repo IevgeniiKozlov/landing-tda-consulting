@@ -1,0 +1,26 @@
+.header {
+    position: fixed;
+    top: 50px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    height: 100px;
+    padding: 10px;
+    background-color: transparent;
+    
+    // Logo
+
+    // Navigation
+    .nav {
+        display: flex;
+        height: fit-content;
+        gap: 10px;
+        margin: 0 auto;
+
+        a {
+            font-size: 1.5rem;
+            color: var(--dark-secondary);
+        }
+    }
+}
