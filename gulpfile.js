@@ -20,7 +20,7 @@ const buildHtml = () => {
 };
 
 const buildSass = () => {
-  return src("./src/styles/*.scss")
+  return src("./src/styles/**/*.scss")
     .pipe(sass({ outputStyle: "compressed" }))
     .pipe(dest("./build/styles/"))
     .pipe(browserSync.stream());
@@ -42,7 +42,7 @@ const runServer = () => {
     server: "./build"
   });
 
-  watch("./src/styles/*.scss", buildSass);
+  watch("./src/styles/**/*.scss", buildSass);
   watch("./src/*.html", buildHtml);
 };
 
