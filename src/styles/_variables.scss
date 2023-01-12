@@ -1,9 +1,10 @@
 $rem-base: 16px;
 
 :root {
-  --primary: #1f6db5;
+  --primary: white;
   --secondary: #5d686e;
-  --dark-secondary: #444c50;
+  --light-secondary: #B6B6B6;
+  --action: #1f6db5;
 }
 
 $breakpoints: (
