@@ -11,17 +11,17 @@
   <body>
     <header id="header-app" class="header">
       <div class="container">
-        <div class="logo">
+        <div class="header-logo">
           <a href="/">
-            <img src="images/Logo_TDA.png" alt="TDA Consulting Engineers" width="180" height="70"/>
+            <img src="images/Logo_TDA.png" alt="TDA Consulting Engineers" width="125" height="50"/>
             <!-- <span class="text">TDA Consulting Engineers</span> -->
           </a>
         </div>
-        <ul class="nav">
+        <ul class="header-nav">
           <li><a class="active" href="#home">Головна</a></li>
           <li>
             <a href="#ourservices">Наші послуги</a>
-            <ul>
+            <ul class="nav-dropdown">
               <li><a href="#">Управління фінансуванням проекту</a></li>
               <li><a href="#">Юридичні консультації та супровід</a></li>
               <li><a href="#">Контроль якості будівельних робіт</a></li>
@@ -33,6 +33,12 @@
           <li><a href="#about">Про нас</a></li>
           <li><a href="#contact">Контакти</a></li>
         </ul>
+        <div class="header-switch-language">
+          <input id="language-toggle" class="check-toggle check-toggle-round-flat" type="checkbox">
+          <label for="language-toggle"></label>
+          <span class="on">UA</span>
+          <span class="off">EN</span>
+        </div>
       </div>
     </header>
     <main id="main-app" class="main-content">
@@ -87,7 +93,6 @@
               <p>Перевірка кошторисної документації та оптимізація витрат</p>
             </div>
           </div>
-          <img class="" src="images/areas-activity.png" alt="TEXT" width="" height=""/>
         </div>
       </section>
     </main>
