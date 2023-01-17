@@ -9,40 +9,91 @@
     <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
-    <header id="header-app" class="header">
+    <header id="header-app" class="header-content">
       <div class="container">
-        <div class="logo">
-          <a href="/">
-            <img src="images/Logo_TDA.png" alt="TDA Consulting Engineers" width="180" height="70"/>
-            <!-- <span class="text">TDA Consulting Engineers</span> -->
-          </a>
+        <div class="header">
+          <div class="header-logo">
+            <a href="/">
+              <img src="images/Logo_TDA.png" alt="TDA Consulting Engineers" width="125" height="50"/>
+              <!-- <span class="text">TDA Consulting Engineers</span> -->
+            </a>
+          </div>
+          <ul class="header-nav">
+            <li><a class="active" href="#home">Головна</a></li>
+            <li>
+              <a href="#ourservices">Наші послуги</a>
+              <ul class="nav-dropdown">
+                <li><a href="#">Управління фінансуванням проекту</a></li>
+                <li><a href="#">Юридичні консультації та супровід</a></li>
+                <li><a href="#">Контроль якості будівельних робіт</a></li>
+                <li><a href="#">Інженерні вишукування</a></li>
+                <li><a href="#">Виконання геодезичних робіт</a></li>
+              </ul>
+            </li>
+            <li><a href="#photogallery">Фотогалерея</a></li>
+            <li><a href="#about">Про нас</a></li>
+            <li><a href="#contact">Контакти</a></li>
+          </ul>
+          <div class="header-switch-language">
+            <input id="language-toggle" class="check-toggle check-toggle-round-flat" type="checkbox">
+            <label for="language-toggle"></label>
+            <span class="on">UA</span>
+            <span class="off">EN</span>
+          </div>
         </div>
-        <ul class="nav">
-          <li><a class="active" href="#home">Головна</a></li>
-          <li>
-            <a href="#ourservices">Наші послуги</a>
-            <ul>
-              <li><a href="#">Управління фінансуванням проекту</a></li>
-              <li><a href="#">Юридичні консультації та супровід</a></li>
-              <li><a href="#">Контроль якості будівельних робіт</a></li>
-              <li><a href="#">Інженерні вишукування</a></li>
-              <li><a href="#">Виконання геодезичних робіт</a></li>
-            </ul>
-          </li>
-          <li><a href="#photogallery">Фотогалерея</a></li>
-          <li><a href="#about">Про нас</a></li>
-          <li><a href="#contact">Контакти</a></li>
-        </ul>
       </div>
     </header>
-    <main id="main-app" class="main-content">
-      <section class="banner bg-banner">
-        <div class="container">
-          <h1 class="title">Наша компанія<br>має величезний досвід роботи<br> з іноземними інвестиціями, розподілом коштів та оптимізації витрат процесу будівництва.</h1>
+    <main id="main-app" class="main-content bg-main">
+      <section class="container">
+        <div class="intro">
+          <div class="intro-company">
+            <h1 class="intro-company-title">TDA CONSULTING ENGINEERS</h1>
+            <p class="intro-company-description">має величезний досвід роботи з іноземними інвестиціями, розподілом коштів та оптимізації витрат процесу будівництва.</p>
+          </div>
+          <div class="intro-illustration">
+            <div class="illustration">
+              <div class="ground"></div>
+              <div class="ground-one"> </div>
+              <div class="bush-one"></div>
+              <div class="building-left">
+                <div class="top"></div>
+              </div>
+              <div class="building-right">
+                <div class="top"></div>
+              </div>
+              <div class="building">
+                <div class="top"></div>
+                <div class="window-1"></div>
+                <div class="window-2">   </div>
+                <div class="window-3">   </div>
+                <div class="window-4">   </div>
+                <div class="window-5"> </div>
+                <div class="window-6">       </div>
+                <div class="window-7"> </div>
+                <div class="window-8"> </div>
+              </div>
+              <div class="bush-two"></div>
+              <div class="bush-three"></div>
+              <div class="stem-one">
+                <div class="leaves-one"></div>
+                <div class="leaves-two"></div>
+                <div class="branch"></div>
+              </div>
+              <div class="stem-two"></div>
+              <div class="balloon">
+                <div class="base"></div>
+                <div class="head"></div>
+              </div>
+            </div>
+          </div>
+          <div class="mouse" aria-hidden="true">
+            <span class="mouse-wheel"></span>
+            <img class="mouse-logo"src="//s3-us-west-2.amazonaws.com/s.cdpn.io/392/Apple_logo_black.svg.png" alt="the trademark of apple inc.">
+          </div>
         </div>
       </section>
       <section class="areas-activity">
-        <div class="container column">
+        <div class="container">
           <div class="cards-activity">
             <div class="card-item">
               <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -87,7 +138,6 @@
               <p>Перевірка кошторисної документації та оптимізація витрат</p>
             </div>
           </div>
-          <img class="" src="images/areas-activity.png" alt="TEXT" width="" height=""/>
         </div>
       </section>
     </main>
