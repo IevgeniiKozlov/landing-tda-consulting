@@ -1,25 +1,16 @@
-.contacts {
-    background-color: var(--light-secondary);
+// .contacts {
 
-    .contact-us {
-        display: flex;
-        position: relative;
-        flex-direction: column;
-        justify-content: start;
-        align-items: center;
-        width: 100%;
-        margin-top: 50px;
-        margin-bottom: 50px;
-        
-        // & h3::before {
-        //     content: "";
-        //     position: absolute;
-        //     bottom: 70px;
-        //     height: 3px;
-        //     width: 50px;
-        //     background: var(--action);
-        // }
-    }
+// }
+
+.contact-us {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .item-wrapper {
@@ -40,10 +31,6 @@
     align-items: center;
 
     & span {
-        color: var(--secondary);
+        color: var(--light-action);
     }
-}
-
-.hr {
-    border-bottom: 3px solid var(--action);
 }
