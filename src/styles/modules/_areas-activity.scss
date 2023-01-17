@@ -1,0 +1,20 @@
+.areas-activity {
+    margin-top: -100px;
+}
+
+.cards-activity {
+    display: flex;
+    gap: 50px;
+
+    .card-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px 0;
+        width: 250px;
+        padding: 30px;
+        border: 1px solid black;
+        border-radius: 10px;
+        background-color: var(--primary);
+    }
+}
