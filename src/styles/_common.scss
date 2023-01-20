@@ -23,4 +23,5 @@ html {
   font-size: $rem-base;
   font-family: 'Roboto', sans-serif;
   color: var(--text-primary);
+  scroll-behavior: smooth;
 }

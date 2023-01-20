@@ -46,11 +46,11 @@
   }
 }
 
-.intro-illustration {
+.intro-illustration { 
   position: absolute;
   display: flex;
   align-items: center;
-  top: 0;
+  bottom: 5%;
   right: 0;
   height: 100%;
   z-index: -1;
@@ -399,19 +399,19 @@ $balloon: var(--light-action);
 }
 
 .mouse {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   margin: 0 auto;
+  position: absolute;
+  bottom: 5%;
   width: 26px;
   height: 48px;
   border-radius: 12px;
   background: white;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
   border: 2px solid white;
-  position: absolute;
-  bottom: 40px;
-  position: absolute;
-  left: 51%;
-  margin-left: -26px;
+  
 
   img {
     margin-top: 14px;
@@ -432,6 +432,14 @@ $balloon: var(--light-action);
     animation-fill-mode: both;
     animation-iteration-count: infinite;
     animation-name: scroll;
+
+    &-icon {
+      width: 10px;
+      height: 10px;
+      margin: 0 auto;
+      margin-bottom: 5px;
+      fill: var(--dark-secondary);
+    }
   }
 
   &-logo {
