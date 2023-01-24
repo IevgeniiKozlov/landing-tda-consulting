@@ -9,9 +9,9 @@
     <link rel="stylesheet" href="styles/styles.css" />
   </head>
   <body>
-    <header id="header-app" class="header-content">
+    <header id="header-app" class="header">
       <div class="container">
-        <div class="header">
+        <div class="header-content">
           <div class="header-logo">
             <a href="/">
               <img src="images/Logo_TDA.png" alt="TDA Consulting Engineers" width="125" height="50"/>
@@ -20,18 +20,9 @@
           </div>
           <ul class="header-nav">
             <li><a class="active" href="#home">Головна</a></li>
-            <li>
-              <a href="#ourservices">Наші послуги</a>
-              <ul class="nav-dropdown">
-                <li><a href="#">Управління фінансуванням проекту</a></li>
-                <li><a href="#">Юридичні консультації та супровід</a></li>
-                <li><a href="#">Контроль якості будівельних робіт</a></li>
-                <li><a href="#">Інженерні вишукування</a></li>
-                <li><a href="#">Виконання геодезичних робіт</a></li>
-              </ul>
-            </li>
+            <li><a href="#our-services">Наші послуги</a></li>
             <li><a href="#photogallery">Фотогалерея</a></li>
-            <li><a href="#about">Про нас</a></li>
+            <li><a href="#about-us">Про нас</a></li>
             <li><a href="#contact">Контакти</a></li>
           </ul>
           <div class="header-switch-language">
@@ -96,16 +87,14 @@
       </section>
       <section id="our-services" class="our-services bg-primary">
         <div class="container f-wrap">
-          <div class="desc">
-            <div class="heading">
-              <h1>Наші послуги</h1>
-            </div>
-            <div class="text">
+          <div class="section-desc">
+            <h2 class="section-title">Наші послуги</h2>
+            <div class="section-text">
               <p>Досвід нашої роботи включає співпрацю в безпосередній взаємодії з великою кількістю іноземних висококваліфікованих підрядників готових взяти участь у відновленні нашої країни.
               </p>
             </div>
           </div>
-          <div class="test"></div>
+          <div class="border"></div>
           <div class="nav-services">
             <div class="column" id="column-1">
               <a href="#project-finance-management" class="nav-service-item">
@@ -174,10 +163,22 @@
               <div class="services-item-content">
                 <h3 class="services-item-header">Управління фінансуванням проекту</h3>
                 <ul class="services-item-desc">
-                  <li>Послуги інженера-консультанта із застосуванням проформ FIDIC</li>
-                  <li>Адаптація проформ FIDIC у відповідності до вимог українського законодавства</li>
-                  <li>Допомога Замовнику під час вибору типу контракту FIDIC</li>
-                  <li>>Оцінка ризиків сторін під час реалізації проектів</li>
+                  <li>
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/></svg>
+                    <span class="text">Послуги інженера-консультанта із застосуванням проформ FIDIC</span>
+                  </li>
+                  <li>
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/></svg>
+                    <span class="text">Адаптація проформ FIDIC у відповідності до вимог українського законодавства</span>
+                  </li>
+                  <li>
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/></svg>
+                    <span class="text">Допомога Замовнику під час вибору типу контракту FIDIC</span>
+                  </li>
+                  <li>
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/></svg>
+                    <span class="text">Оцінка ризиків сторін під час реалізації проектів</span>
+                  </li>
                 </ul>
               </div>
             </article>
@@ -190,10 +191,22 @@
               <div class="services-item-content">
                 <h3 class="services-item-header">Юридичні консультації та супровід</h3>
                 <ul class="services-item-desc">
-                  <li>Юридичний супровід та підтримка під час виконання зобов'язань сторін за договором</li>
-                  <li>Супровід під час отримання дозвільної документації та проведення єкспертизи</li>
-                  <li>Допомога в управлінні контрактними відносинами</li>
-                  <li>Внесення змін до контракту, оформлення претензій доарбітражне врегулювання спорів</li>
+                  <li>
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/></svg>
+                    <span class="text">Юридичний супровід та підтримка під час виконання зобов'язань сторін за договором</span>
+                  </li>
+                  <li>
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/></svg>
+                    <span class="text">Супровід під час отримання дозвільної документації та проведення єкспертизи</span>
+                  </li>
+                  <li>
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/></svg>
+                    <span class="text">Допомога в управлінні контрактними відносинами</span>
+                  </li>
+                  <li>
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/></svg>
+                    <span class="text">Внесення змін до контракту, оформлення претензій доарбітражне врегулювання спорів</span>
+                  </li>
                 </ul>
               </div>
             </article>
@@ -286,6 +299,33 @@
               <img src="images/w20.jpg" alt="">
               <img src="images/w22.jpg" alt="">
             </div>
+          </div>
+        </div>
+      </section>
+      <section id="about-us" class="about-us">
+        <div class="container">
+          <div class="about-us-description">
+            <h2 class="section-title">
+              Про нас
+            </h2>
+            <p class="about-us-text">
+              This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. 
+              Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem
+            </p>
+            <h3 class="third-title">Наші сертифікати</h3>
+            <div class="slider">
+              <img src="images/Dosujy.jpg" class="slide" height="300" width="250">
+              <img src="images/Drokin.jpg" class="slide" height="300" width="250">
+              <img src="images/fidic.jpg" class="slide" height="300" width="250">
+              <img src="images/Jovtobruch.jpg" class="slide" height="300" width="250">
+              <img src="images/Korotinskiy.jpg" class="slide" height="300" width="250">
+              <img src="images/Kovtun.jpg" class="slide" height="300" width="250">
+              <img src="images/smet1.jpg" class="slide" height="300" width="250">
+              <img src="images/smet2.jpg" class="slide" height="300" width="250">
+              <img src="images/smet3.jpg" class="slide" height="300" width="250">
+            </div>
+          </div>
+          <div class="about-us-ilustration">
           </div>
         </div>
       </section>
