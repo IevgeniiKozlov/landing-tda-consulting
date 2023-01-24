@@ -3,6 +3,20 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
+
+  .section-title {
+    font-size: 2.5rem;
+    color: var(--dark-action);
+
+    &:after {
+      content: "";
+      display: block;
+      width: 7rem;
+      height: 4px;
+      background: var(--secondary);
+      margin-top: 4px;
+    }
+  }
 }
 
 .bg-main {
