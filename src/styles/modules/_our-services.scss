@@ -1,7 +1,7 @@
 .our-services {
     display: flex;
     flex-direction: column;
-    padding: 100px 0;
+    padding: 50px 0;
 }
 
 // .cards-activity {
@@ -20,42 +20,50 @@
 //     }
 // }
 
-.heading h1:after {
-    content: '';
-    display: block;
-    width: 8px;
-    height: 2px;
-    background: #BABABA;
-    margin-top: 4px;
-    
-}
-
 //  OUR SERVICES 
-.our-services .desc {
+.section-desc {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 100%;
+    margin-bottom: 50px;
+
+    @include for-tablet-landscape-up {
+        width: 50%;
+    }
+
+    .section-text {
+        margin-right: 100px;
+        color: var(--text-primary);
+    }
 }
 
-.our-services .desc .heading h1 {
-    text-transform: uppercase;
-    font-weight: bold;
-    letter-spacing: 1.4px;
-    margin-bottom: 30px;
-}
+/* OUR SERVICES lEFT SIDE */
 
-.our-services .desc .text {
-    margin-right: 100px;
-    color: var(--text-primary);
-}
+// .direction-services {
+//     width: 50%;
+//     display: flex;
+//     gap: 40px;
+//     padding: 2rem;
+
+//     .card-services {
+//         flex: 1 1 33%;
+//         padding: 10px;
+//         border: 3px solid var(--secondary);
+//     }
+// }
 
 /* OUR SERVICES RIGHT SIDE */
 .nav-services {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     position: relative;
-    width: 50%;
+    width: 40%;
     flex: 1 1;
+
+    @include for-tablet-landscape-up {
+        width: 90%;
+        justify-content: flex-end;
+    }
 }
 
 .nav-services .column {
@@ -103,7 +111,6 @@
 }
 
 /* media query */
-
 @media all and (max-width: 967px) {
     .our-services {
         padding-top: 60px;
@@ -128,56 +135,70 @@
         transform: rotate(0deg);
     }
 }
-// 
-// .test {
-//   display: block;
-//   margin-top: 0.5em;
-//   margin-bottom: 0.5em;
-//   margin-left: auto;
-//   margin-right: auto;
-//   border-style: inset;
-//   border-width: 10px;
-// }
-.test {
+
+.border {
     position: relative;
     display: flex;
     flex: 1 1;
     height: 208px;
-    width: 100%;
-    margin-top: auto;
-    margin-bottom: -32px;
-    margin-right: -16px;
+    width: 10%;
+    margin: {
+        top: auto;
+        right: 0;
+        left: 16px;
+        bottom: -32px;
+    }
+
     border: {
         top: 4px solid var(--secondary);
         left: 4px solid var(--secondary);
     };
     border-top-left-radius: 30px;
+
+    @include for-tablet-landscape-up {
+        margin: {
+            right: -16px;
+            left: 0;
+            bottom: 32px;
+        }
+        margin-right: -16px;
+        margin-bottom: -32px;
+    }
 }
 
 // Finance services block
 .services {
     position: relative;
     width: 100%;
-	padding: 150px 0;
+    padding-top: 100px;
     margin: 0 auto;
-	margin: {
-		top: 2em;
-		bottom: 2em;
-	}
+	margin: 0;
+
+    @include for-tablet-landscape-up {
+        margin: {
+            top: 2rem;
+            bottom: 2rem
+        };
+    }
 
     &::before {
         content: "";
         position: absolute;
         top: 0;
-        left: 50%;
-        height: 100%;
+        left: 1rem;
+        height: 90%;
         width: 4px;
         background: var(--secondary);
+        
+        
+        @include for-tablet-landscape-up {
+            left: 50%;
+        }
     }
 
     .services-item {
         position: relative;
-        margin-bottom: 200px;
+        margin-bottom: 100px;
 
         &::after {
             clear: both;
@@ -186,7 +207,11 @@
         }
 
         &:nth-child(even) .services-item-content {
-            float: right;
+            float: left;
+
+            @include for-tablet-landscape-up {
+                float: right;
+            }
         }
     
         &:first-child {
@@ -201,11 +226,16 @@
             width: 60px;
             height: 60px;
             position: absolute;
-            left: 50%;
+            left: 1rem;
             margin-left: -28px;
             background-color: var(--secondary);
             border-radius: 50%;
             box-shadow: 0 0 0 4px var(--action), inset 0 2px 0 rgb(0 0 0 / 8%), 0 3px 0 4px rgb(0 0 0 / 5%);
+
+
+            @include for-tablet-landscape-up {
+                left: 50%;
+            }
 
             svg {
                 display: block;
@@ -221,13 +251,20 @@
         }
 
         .services-item-content {
-            margin-left: 0;
-            padding: 1.6em;
-            width: 45%;
-            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 75%;
+            margin-left: 4rem;
+            padding: 1.6rem;
             border-radius: 30px;
             background-color: var(--secondary);
 
+            @include for-tablet-landscape-up {
+                width: 45%;
+                margin-left: 0;
+                align-items: center;
+            }
             // &::before {
             //     content: "";
             //     height: 0;
@@ -241,6 +278,43 @@
             //     border: 7px solid transparent;
             //     border-right: 7px solid var(--action);
             // }
+        }
+
+        .services-item-content .services-item-header {
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            color: var(--text-primary);
+            font-weight: 900;
+        }
+
+        .services-item-content .services-item-desc {
+            display: flex;
+            flex-direction: column;
+            list-style: none;
+            padding: 0 2rem;
+            // margin-bottom: 1rem;
+            gap: 5px;
+
+            @include for-tablet-landscape-up {
+                gap: 10px;
+            }
+        }
+
+        .services-item-content .services-item-desc li {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .services-item-content .services-item-desc li .icon {
+            width: 10%;
+            height: 25px;
+            fill: var(--second-action);
+        }
+
+        .services-item-content .services-item-desc li .text {
+            width: 90%;
+            color: var(--text-primary);
         }
     }
 }
