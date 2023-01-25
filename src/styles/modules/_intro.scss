@@ -13,11 +13,16 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  z-index: 1;
   
+  @include for-phone-only {
+    align-items: center;
+  }
+
   &-title {
     font-size: 1.5rem;
     margin: {
-      top: -100px;
+      top: -200px;
       bottom: 15px;
     };
     padding: 30px;
@@ -25,8 +30,12 @@
     position: relative;
     color: var(--primary);
 
+    @include for-tablet-portrait-up {
+      font-size: 1.5rem;
+    }
+
     @include for-tablet-landscape-up {
-      font-size: 2.5rem;
+      font-size: 2rem;
       margin-bottom: 30px;
     }
 
@@ -47,12 +56,17 @@
   }
 
   &-description {
-    width: 50%;
+    // width: 50%;
     margin-left: 50px;
     font-size: 1rem;
+    font-style: italic;
+
+    @include for-tablet-portrait-up {
+      width: 55%;
+    }
 
     @include for-tablet-landscape-up {
-      width: 70%;
+      width: 60%;
       font-size: 1.5rem;
     }
   }
@@ -76,13 +90,22 @@ $bush: #5adda0;
 $balloon: var(--light-action);
 
 .illustration {
-  height: 500px;
+  height: 450px;
   width: 495px;
   margin-right: -200px;
   position: relative;
   background: $back;
   border-radius: 30px;
   animation: balloon 2s forwards infinite;
+
+  @include for-phone-only {
+    display: none;
+  }
+
+  @include for-tablet-landscape-up {
+    height: 500px;
+
+  }
 }
 
 .ground {
