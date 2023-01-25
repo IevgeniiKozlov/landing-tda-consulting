@@ -3,6 +3,7 @@ const clean = require("gulp-clean");
 const imagemin = require("gulp-imagemin");
 const htmlmin = require("gulp-htmlmin");
 const sass = require("gulp-sass")(require("sass"));
+const concat = require("gulp-concat");
 const browserSync = require("browser-sync").create();
 
 const clear = () => {
@@ -26,6 +27,12 @@ const buildSass = () => {
     .pipe(browserSync.stream());
 };
 
+const buildJs = () =>{
+  return src("./src/javascript/**/*.js")
+    .pipe(concat("script.js"))
+    .pipe(dest("./build/js/"))
+}
+
 const imagesOptimize = () => {
   return src("./src/images/*.{png,svg,jpg,jpeg}")
     .pipe(imagemin())
@@ -33,7 +40,7 @@ const imagesOptimize = () => {
 };
 
 const build = series(clear, parallel(
-  buildHtml, buildSass, imagesOptimize,
+  buildHtml, buildSass, buildJs, imagesOptimize,
 ));
 
 const runServer = () => {
@@ -42,6 +49,7 @@ const runServer = () => {
     server: "./build"
   });
 
+  watch("./src/javascript/**/*.js", buildJs);
   watch("./src/styles/**/*.scss", buildSass);
   watch("./src/*.html", buildHtml);
 };
