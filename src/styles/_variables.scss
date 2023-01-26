@@ -1,7 +1,6 @@
 $rem-base: 16px;
 
 :root {
-  
   --text-primary: #5d686e ;
   --text-secondary: #E8F1F5;
   --icon-primary: #004A7C;
@@ -17,5 +16,8 @@ $rem-base: 16px;
 }
 
 $breakpoints: (
-  "xl": 1200px,
+  "large": 1200px,
+  "medium": 900px,
+  "small": 600px,
+  "smaller": 599px
 );
