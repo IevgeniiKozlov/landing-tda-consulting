@@ -10,8 +10,8 @@
     @include for-tablet-landscape-up {
        flex-direction: row;
        gap: 30px;
+       padding-top: 80px;
     }
-
 }
 
 .contact-us {
@@ -30,7 +30,7 @@
 }
 
 .item-wrapper {
-    width: 40px;
+    width: 25px;
     display: flex;
 
     .item-icon {
