@@ -119,12 +119,11 @@
     border-top-left-radius: 30px;
 
     @include for-phone-only {
+        height: 250px;
         flex: 0;
-        order: 1;
         margin: {
             right: auto;
             left: 0;
-            top: -200px;
         }
     }
 
