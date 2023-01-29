@@ -11,7 +11,7 @@ export default {
     },
     intro: {
       title: 'TDA CONSULTING ENGINEERS',
-      description: 'has vast experience in working with foreign investments, allocation of funds and cost optimization of the construction process.'
+      description: 'Has vast experience in working with foreign investments, allocation of funds and cost optimization of the construction process.'
     },
     services: {
       title: 'Our services',
@@ -61,7 +61,7 @@ export default {
     },
     aboutUs: {
       title: 'About us',
-      description: '?',
+      description: 'a team of specialists with many years of experience, who have already managed to prove themselves on the builders\' market. We provide any consultations related to construction and offer you the best solutions. This will affect the quality of the object, help to optimize project decisions and financial indicators of costs, operational indicators of objects, both for the customer and the contractor. We are always open to new ideas, projects and cooperation.',
       subtitle: 'Our certificates'
     },
     contacts: {
