@@ -21,12 +21,12 @@ export default {
           title: 'Project financing management',
           service1: 'Consulting engineer services using FIDIC proforma',
           service2: 'Adaptation of FIDIC proformas in accordance with the requirements of Ukrainian legislation',
-          service3: 'Assistance to the Customer when choosing the type of FIDIC contract',
+          service3: 'Assistance to the Customer when selecting the type of FIDIC contract',
           service4: 'Risk assessment of parties during project implementation'
         },
         qualityControl: {
           title: 'Quality control of construction works',
-          service1: 'Quality assurance during the preparation of preliminary design, conceptual design, working design documentation, analysis and review of all types of design documentation and preparation of relevant executive documentation',
+          service1: 'Quality assurance during the preparation of preliminary design, conceptual design, working design documentation, analysis and review of all types of design documentation and preparation of relevant as-built documentation',
           service2: 'Verification of the compliance of the construction works performed with the requirements of the design and work documentation, as well as with the requirements of local legislation and the terms of the contract for the performance of construction works',
           service3: 'Quality control of construction products and equipment used in construction works',
           service4: 'Verification and assistance in the process of preparation of documents of all types required for submission in accordance with the requirements of local regulations and legislation',
@@ -42,17 +42,17 @@ export default {
         },
         geodeticWorks: {
           title: 'Execution of geodetic works',
-          service1: 'Development of a project for geodetic works for objects of categories SS2, SS3',
+          service1: 'Development of a project for geodetic works for objects CC2 and CC3 classes of consequences',
           service2: 'Development of geodetic and geotechnical monitoring projects',
           service3: 'Control geodetic measurements to assess the quality and scope of the completed works',
           service4: 'Quality control of executive geodetic documentation',
           service5: 'Completion of executive geodetic documentation'
         },
         engineeringResearch: {
-          title: 'Engineering searches',
+          title: 'Engineering surveys',
           service1: 'Verification and development of the technical task for engineering searches in accordance with the needs of construction',
           service2: 'Evaluation of engineering research results',
-          service3: 'Carrying out engineering surveys and preparing report documentation in accordance with the requirements of the State Technical and Technical Service of Ukraine'
+          service3: 'Carrying out engineering surveys and preparing report documentation in accordance with the requirements of DBN and DSTU'
         }
       }
     },
@@ -61,7 +61,7 @@ export default {
     },
     aboutUs: {
       title: 'About us',
-      description: 'a team of specialists with many years of experience, who have already managed to prove themselves on the builders\' market. We provide any consultations related to construction and offer you the best solutions. This will affect the quality of the object, help to optimize project decisions and financial indicators of costs, operational indicators of objects, both for the customer and the contractor. We are always open to new ideas, projects and cooperation.',
+      description: 'TDA CONSULTING ENGINEERS - a team of specialists with many years of experience, who have already managed to prove themselves on the construction market. We provide any consultations related to construction and offer you the best solutions. It has positive impact on the object quality, help to optimise design solution and financial indicators of costs, operational indicators of objects, both for the customer and the contractor. We are always open to new ideas, projects and cooperation.',
       subtitle: 'Our certificates'
     },
     contacts: {
