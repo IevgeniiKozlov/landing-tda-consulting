@@ -1,0 +1,49 @@
+.contacts-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 10px;
+    text-align: center;
+    line-height: 1.5rem;
+    padding-top: 80px;
+
+    @include for-tablet-landscape-up {
+       flex-direction: row;
+       gap: 30px;
+       padding-top: 80px;
+    }
+}
+
+.contact-us {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    flex: 1 1 33%;
+    padding: 1.6rem;
+    border-radius: 30px;
+
+    @include for-tablet-landscape-up {
+        
+    }
+}
+
+.item-wrapper {
+    width: 25px;
+    display: flex;
+
+    .item-icon {
+        fill: var(--action);
+    }
+}
+
+.text-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & span {
+        color: var(--light-action);
+    }
+}

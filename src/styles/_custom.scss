@@ -1,0 +1,19 @@
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 30px;
+    margin: 0 auto;
+
+    &-column {
+        @extend .container;
+        flex-direction: column;
+    }
+    
+}
+
+.f-wrap {
+    flex-wrap: wrap;
+}

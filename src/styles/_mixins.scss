@@ -1,0 +1,14 @@
+@use "sass:map";
+
+@mixin for-phone-only {
+  @media (max-width: map.get($breakpoints, "smaller")) { @content; }
+}
+@mixin for-tablet-portrait-up {
+  @media (min-width: map.get($breakpoints, "small")) { @content; }
+}
+@mixin for-tablet-landscape-up {
+  @media (min-width: map.get($breakpoints, "medium")) { @content; }
+}
+@mixin for-desktop-up {
+  @media (min-width: map.get($breakpoints, "large")  ) { @content; }
+}

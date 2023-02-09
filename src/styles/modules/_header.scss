@@ -1,26 +1,302 @@
+// Header block
 .header {
-    position: fixed;
-    top: 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
     display: flex;
     align-items: center;
     width: 100%;
-    max-width: 1200px;
     height: 100px;
-    padding: 10px;
-    background-color: transparent;
-    
-    // Logo
+    transition: all 0.3s;
+    background: none;
+    overflow: hidden;
+    z-index: 999;
 
-    // Navigation
-    .nav {
+    // Content
+    &-content {
+        width: 100%;
         display: flex;
-        height: fit-content;
-        gap: 10px;
-        margin: 0 auto;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+    }
+    // Logo
+    // Navigation menu
+    &-nav {  
+        display: none;
+        list-style: none;
+        margin-left: 0;
 
-        a {
-            font-size: 1.5rem;
-            color: var(--dark-secondary);
+        @include for-tablet-landscape-up {
+            display: flex;
+            margin-left: 1rem;
+            gap: 10px;
+        }
+
+        @include for-desktop-up {
+            margin-left: 5rem;
+        }
+      
+        li {
+            position: relative;
+            display: block;
+        }
+
+        li a {
+            display: block;
+            padding: 5px 10px;
+            color: var(--text-primary);
+            text-decoration: none;
+            border: 2px solid var(--secondary);
+            border-radius: 30px;
+        }
+        
+        li a:hover {
+            text-decoration: none;
+            transition: 0.075s linear;
+        }
+      
+       li:hover ul {
+            left: -40px;
+            opacity: 1;
+        }
+      
+        li:hover a {
+            color: var(--primary);
+            background: var(--action);
+            opacity: 85%;
+            border-color: var(--action);
+            text-decoration: none;
+        }
+      
+        li:hover ul a {
+            text-decoration: none;
+            transition: 0.075s linear;
+        }
+      
+        li:hover ul li a:hover {
+            background: var(--light-action);
+            border-color: var(--light-action);
+            transform: scale(1.05);
         }
     }
+
+    // Switch button language
+    &-group-btn {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    &-switch-language {
+        position: relative;
+        display: flex;
+        margin-left: auto;
+
+        span {
+            position: absolute;
+            top: 10px;
+            pointer-events: none;
+            font-weight: bold;
+            font-size: 12px;
+            text-transform: uppercase;
+            text-shadow: 0 1px 0 rgba(0, 0, 0, .06);
+            width: 50%;
+            text-align: center;
+        }
+
+        input.check-toggle-round-flat:checked ~ .off {
+            color: var(--primary);
+        }
+          
+        input.check-toggle-round-flat:checked ~ .on {
+            color: var(--text-primary);
+        }
+
+        span.on {
+            left: 0;
+            padding-left: 2px;
+            color: var(--primary);
+        }
+
+        span.off {
+            right: 0;
+            padding-right: 4px;
+            color: var(--text-primary);
+        }
+
+        .check-toggle {
+            position: absolute;
+            margin-left: -9999px;
+            visibility: hidden;
+        }
+    
+        .check-toggle + label {
+            display: block;
+            position: relative;
+            cursor: pointer;
+            outline: none;
+            user-select: none;
+        }
+          
+        input.check-toggle-round-flat + label {
+            width: 100px;
+            height: 30px;
+            background-color: var(--secondary);
+            border-radius: 60px;
+        }
+    
+        input.check-toggle-round-flat + label:before, input.check-toggle-round-flat + label:after {
+            display: block;
+            position: absolute;
+            content: "";
+        }
+          
+        input.check-toggle-round-flat + label:before {
+            top: 2px;
+            left: 2px;
+            bottom: 2px;
+            right: 2px;
+            background-color: var(--primary);
+            border-radius: 60px;
+        }
+    
+        input.check-toggle-round-flat + label:after {
+            top: 2px;
+            left: 2px;
+            bottom: 2px;
+            width: 48px;
+            background-color: var(--light-action);
+            border-radius: 60px;
+            border: 2px solid var(--primary);
+            transition: margin 0.2s;
+        }
+
+        input.check-toggle-round-flat:checked + label:after {
+            margin-left: 48px;
+        }
+    }
+
+    // Toogle Navigation Button
+    &-toggle-btn {
+        cursor: pointer;
+        // position: absolute;
+        // right: 22px;
+        // margin-left: 30px;
+
+        @include for-tablet-landscape-up {
+            display: none;
+        }
+
+        &[data-navicon=button] {
+            margin: 0;
+            border: none;
+            background: none;
+            cursor: pointer;
+        }
+
+        [data-navicon=button] > * {
+            display: block;
+        }
+
+        [data-navicon=button]:focus {
+            outline: none;
+        }   
+    }
+
+    .navicon {
+        padding: 0.7777777778rem 0.4375rem;
+        transition: 0.3s;
+    }
+      
+    .navicon__lines {
+        display: inline-block;
+        width: 1.75rem;
+        height: 0.25rem;
+        background: var(--dark-action);
+        border-radius: 0.125rem;
+        transition: 0.3s;
+        position: relative;
+    }
+
+    .navicon__lines:before, .navicon__lines:after {
+        display: inline-block;
+        width: 1.75rem;
+        height: 0.25rem;
+        background: var(--dark-action);
+        border-radius: 0.125rem;
+        transition: 0.3s;
+        position: absolute;
+        left: 0;
+        content: "";
+        transform-origin: 0.125rem center;
+    }
+
+    .navicon__lines:before {
+        top: 0.4375rem;
+    }
+
+    .navicon__lines:after {
+        top: -0.4375rem;
+    }
+
+    .is--closed .navicon__lines {
+        transform: scale3d(0.8, 0.8, 0.8);
+    }
+      
+    .navicon-x.is--closed .navicon__lines {
+        background: transparent;
+    }
+
+    .navicon-x.is--closed .navicon__lines:before, .navicon-x.is--closed .navicon__lines:after {
+        transform-origin: 50% 50%;
+        top: 0;
+        width: 1.75rem;
+    }
+
+    .navicon-x.is--closed .navicon__lines:before {
+        transform: rotate3d(0, 0, 1, 45deg);
+    }
+
+    .navicon-x.is--closed .navicon__lines:after {
+        transform: rotate3d(0, 0, 1, -45deg);
+    }      
 }
+
+#header-app.is-open {
+    align-items: flex-start;
+    height: 100%;
+    max-height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    overflow: scroll;
+    background: rgba(255, 255, 255, 0.93);
+    opacity: 1;
+
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header-content .header-nav {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 50%;
+    }
+
+    .header-content .header-group-btn {
+        position: fixed;
+        top: 37px;
+        right: 30px;
+    }
+}
+
+#header-app.is-sticky {
+    position: fixed;
+    height: auto;
+    top: 0;
+    background: rgba(255, 255, 255, 0.93);
+    opacity: 1;
+  }

@@ -1,0 +1,495 @@
+// Intro
+.intro {
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  min-height: 100vh;
+}
+
+.intro-company {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 1;
+  
+  @include for-phone-only {
+    align-items: center;
+  }
+
+  &-title {
+    font-size: 1.5rem;
+    margin: {
+      top: -200px;
+      bottom: 15px;
+    };
+    padding: 30px;
+    width: fit-content;
+    position: relative;
+    color: var(--primary);
+
+    @include for-tablet-portrait-up {
+      font-size: 1.5rem;
+    }
+
+    @include for-tablet-landscape-up {
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+
+    &:before {
+      content: "";
+      right: 0;
+      top: 0;
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      background-color: var(--dark-action);
+      transform: translateZ(0);
+      z-index: -1;
+      opacity: .6;
+    }
+  }
+
+  &-description {
+    // width: 50%;
+    margin-left: 50px;
+    font-size: 1rem;
+    font-style: italic;
+
+    @include for-tablet-portrait-up {
+      width: 55%;
+    }
+
+    @include for-tablet-landscape-up {
+      width: 60%;
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.intro-illustration { 
+  position: absolute;
+  display: flex;
+  align-items: center;
+  bottom: 5%;
+  right: 0;
+  height: 100%;
+  z-index: -1;
+}
+
+$ground: var(--light-action);
+$window: lighten(#d3b57e,20%);
+$side-build: var(--action);
+$back: var(--secondary);
+$bush: #5adda0;
+$balloon: var(--light-action);
+
+.illustration {
+  height: 450px;
+  width: 495px;
+  margin-right: -200px;
+  position: relative;
+  background: $back;
+  border-radius: 30px;
+  animation: balloon 2s forwards infinite;
+
+  @include for-phone-only {
+    display: none;
+  }
+
+  @include for-tablet-landscape-up {
+    height: 500px;
+
+  }
+}
+
+.ground {
+  border: 3px solid $ground;
+  position: absolute;
+  top: 350px;
+  left: 100px;
+  border-radius: 5px;
+  animation: ground-anim 3s forwards infinite;
+}
+.ground-one {
+  height: 0px;
+  border: 2px solid $ground;  
+  position: absolute;
+  top: 380px;
+  left: 130px;
+  border-radius: 5px;
+  animation: ground-one-anim 3s forwards infinite;
+  
+}
+
+.building-left {
+  width: 60px;
+  border-left: 3px solid $side-build;
+  position: absolute;
+  top: 230px;
+  left: 140px;
+  background: $side-build;
+  animation:  building-left 3s forwards infinite;
+  
+    .top {
+    border: 2px solid $side-build;
+    position: absolute;
+    top: -2px;
+    left: -13px;
+    border-radius: 5px;
+    animation:  building-left-top 3s forwards infinite;
+  }
+}
+
+.building {
+  width: 75px;
+  border: 3px solid $ground;
+  border-bottom: none;
+  border-top: none;
+  position: absolute;
+  top: 150px;
+  left: 200px;
+  animation: building 3s forwards infinite;
+  
+  .top {
+    border: 2px solid $ground;
+    position: absolute;
+    top: -2px;
+    left: -17px;
+    border-radius: 5px;
+    animation:  building-top 3s forwards infinite;
+  }
+}
+
+@keyframes building {
+  0% {
+    height: 0px;
+  }
+  50%,80%,100%{
+  height: 200px;
+    
+  }
+}
+
+@keyframes building-top {
+  0% {
+    width: 0px;
+  }
+  50%,80%,100%{
+  width:106px;
+  }
+}
+
+@keyframes ground-anim {
+  0% {
+    width: 0px;
+  }
+  50%,80%,100%{
+    width: 300px;
+  }
+}
+@keyframes ground-one-anim {
+  0% {
+    width: 0px;
+  }
+  50%,80%,100%{
+    width: 40px;
+  }
+}
+
+@keyframes building-left {
+  0% {
+    height: 0px;
+  }
+  50%,80%,100%{
+  height: 120px;
+  }
+}
+
+@keyframes building-left-top {
+  0% {
+    width: 0px;
+  }
+  50%,80%,100%{
+    width:70px;
+  }
+}
+
+.window {
+  height: 7px;
+  border: 2px solid $ground;
+  background: $window;
+  position: absolute;
+  border-radius: 2px;
+  animation: windows 3s forwards infinite;
+}
+
+.window-1 {
+  @extend .window;
+  top: 20px;
+  left: 20px;
+}
+.window-2 {
+  @extend .window;
+  top: 40px;
+  right: 21px;
+}
+.window-3 {
+  @extend .window;
+  top: 60px;
+  left: 20px;
+  
+}
+.window-4 {
+  @extend .window;
+  top: 80px;
+  right: 21px;
+  
+}
+.window-5 {
+  @extend .window;
+  top: 100px;
+  left: 20px;
+  
+}
+.window-6 {
+  @extend .window;
+  top: 120px;
+  right: 21px;
+  
+}
+.window-7 {
+  @extend .window;
+  top: 140px;
+  left: 20px;
+  
+}
+
+.window-8 {
+  @extend .window;
+  top: 160px;
+  right: 21px;
+}
+
+@keyframes windows {
+  0% {
+  width: 0px;
+  }
+  50%,80%,100%{
+  width: 30px;
+  }
+}
+
+
+.building-right {
+  width: 60px;
+  border-left: 3px solid $side-build;
+  position: absolute;
+  top: 190px;
+  right: 160px;
+  background: $side-build;
+  animation:  building-right 3s forwards infinite;
+  
+    .top {
+    border: 2px solid $side-build;
+    position: absolute;
+    top: -2px;
+    right: -11px;
+    border-radius: 5px;
+    animation:  building-right-top 3s forwards infinite;
+  }
+}
+@keyframes building-right {
+  0% {
+    height: 0px;
+  }
+  50%,80%,100%{
+  height: 160px;
+  }
+}
+
+@keyframes building-right-top {
+  0% {
+    width: 0px;
+  }
+  50%,80%,100%{
+    width:70px;
+  }
+}
+
+.bush {
+  z-index: 2;
+  background: $bush;
+  width: 40px;
+  height: 20px;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  position: absolute;
+  top: 330px;
+  animation: bush 3s forwards infinite;
+}
+
+.bush-one {
+  @extend .bush;
+  left: 120px;
+}
+
+.bush-two {
+  @extend .bush;
+  right: 160px;
+}
+.bush-three {
+  @extend .bush;
+  height: 30px;
+  top: 320px;
+  right: 140px;
+}
+
+.stem-one {
+  height: 60px;
+  width: 0px;
+  border: 2px solid $ground;
+  position: absolute;
+  top: 280px;
+  left: 136px;
+  animation: bush 3s forwards infinite;
+  .branch {
+  height: 15px;
+  width: 0px;
+  border: 2px solid $ground;
+  position: absolute;
+  transform: rotate(40deg);
+  left: 5px;
+  z-index: 3;
+  }
+  .leaves-one {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: $bush;
+    position: absolute;
+    left: -20px;
+    top: -45px;
+  }
+    .leaves-two {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: $bush;
+    position: absolute;
+    left: -13px;
+    top: -60px;
+  }
+}
+
+@keyframes bush {
+  0% {
+    transform: scale(0);
+  }
+  50%,80%,100%{
+    transform: scale(1);
+  }
+}
+
+.balloon {
+  width: 75px;
+  height: 75px;
+  position: absolute;
+  top: 60px;
+  left: 100px;
+  animation: balloon 3s forwards infinite;
+  .head {
+    width: 40px;
+    height: 48px;
+    border-radius: 50%;
+    position: absolute;
+    left: 10px;
+    background: $balloon;
+  }
+  .base {
+    width: 7px;
+    height: 7px;
+    position: absolute;
+    top: 47px;
+    left: 28px;
+    background: $balloon;
+  }
+}
+
+@keyframes balloon {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.mouse {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 5%;
+  width: 26px;
+  height: 48px;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  border: 2px solid white;
+  
+
+  img {
+    margin-top: 14px;
+    width: 9px;
+    height: auto;
+    opacity: 0.15;
+  }
+
+  &-wheel {
+    display: block;
+    margin: 6px auto;
+    width: 2px;
+    height: 2px;
+    border-radius: 4px;
+    background: #000;
+    border: 1px solid transparent;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-name: scroll;
+
+    &-icon {
+      width: 10px;
+      height: 10px;
+      margin: 0 auto;
+      margin-bottom: 5px;
+      fill: var(--dark-secondary);
+    }
+  }
+
+  &-logo {
+    margin: 6px;
+  }
+}
+
+@keyframes scroll {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+}

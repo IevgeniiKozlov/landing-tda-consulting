@@ -1,11 +1,23 @@
 $rem-base: 16px;
 
 :root {
-  --primary: #1f6db5;
-  --secondary: #5d686e;
-  --dark-secondary: #444c50;
+  --text-primary: #5d686e ;
+  --text-secondary: #E8F1F5;
+  --icon-primary: #004A7C;
+  --icon-light-primary: #0074c2;
+  --icon-secondary: #5d686e;
+  --primary: #FAFAFA;
+  --secondary: #E8F1F5;
+  --dark-secondary: #aeb6b9;
+  --dark-action: #004A7C;
+  --action: #005691;
+  --light-action: #0074c2;
+  --second-action: #5adda0;
 }
 
 $breakpoints: (
-  "xl": 1200px,
+  "large": 1200px,
+  "medium": 900px,
+  "small": 600px,
+  "smaller": 599px
 );

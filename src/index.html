@@ -1,16 +1,464 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>TDA Consalting</title>
-    <link rel="icon" href="./favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/styles.css" />
   </head>
   <body>
-    <div class="wrapper">
+    <header id="header-app" class="header">
+      <div class="container">
+        <div class="header-content">
+          <div class="header-logo">
+            <a href="/">
+              <img src="images/Logo_TDA.png" alt="TDA Consulting Engineers" width="125" height="50"/>
+            </a>
+          </div>
+          <ul class="header-nav">
+            <li><a class="active" href="#home" data-i18n-key="header.nav.item1"></a></li>
+            <li><a href="#our-services" data-i18n-key="header.nav.item2"></a></li>
+            <li><a href="#photogallery" data-i18n-key="header.nav.item3"></a></li>
+            <li><a href="#about-us" data-i18n-key="header.nav.item4"></a></li>
+            <li><a href="#contacts" data-i18n-key="header.nav.item5"></a></li>
+          </ul>
+          <div class="header-group-btn">
+            <div class="header-switch-language">
+              <input id="language-toggle" class="check-toggle check-toggle-round-flat" type="checkbox">
+              <label for="language-toggle"></label>
+              <span class="on">UA</span>
+              <span class="off">EN</span>
+            </div>
+            <button class="header-toggle-btn navicon navicon-x" type="button" aria-label="Toggle Navigation" data-navicon="button">
+              <span class="navicon__lines"></span>
+            </button>
+          </div>    
+        </div>
+      </div>
+    </header>
+    <main id="main-app" class="main-content bg-main">
+      <section class="intro">
+        <div class="container">
+          <div class="intro-company">
+            <h1 class="intro-company-title" data-i18n-key="intro.title">TDA CONSULTING ENGINEERS</h1>
+            <p class="intro-company-description" data-i18n-key="intro.description"></p>
+          </div>
+          <div class="intro-illustration">
+            <div class="illustration">
+              <div class="ground"></div>
+              <div class="ground-one"> </div>
+              <div class="bush-one"></div>
+              <div class="building-left">
+                <div class="top"></div>
+              </div>
+              <div class="building-right">
+                <div class="top"></div>
+              </div>
+              <div class="building">
+                <div class="top"></div>
+                <div class="window-1"></div>
+                <div class="window-2"></div>
+                <div class="window-3"></div>
+                <div class="window-4"></div>
+                <div class="window-5"> </div>
+                <div class="window-6"></div>
+                <div class="window-7"></div>
+                <div class="window-8"></div>
+              </div>
+              <div class="bush-two"></div>
+              <div class="bush-three"></div>
+              <div class="stem-one">
+                <div class="leaves-one"></div>
+                <div class="leaves-two"></div>
+                <div class="branch"></div>
+              </div>
+              <div class="stem-two"></div>
+              <div class="balloon">
+                <div class="base"></div>
+                <div class="head"></div>
+              </div>
+            </div>
+          </div>
+          <div class="mouse" aria-hidden="true">
+            <span class="mouse-wheel"></span>
+              <svg class="mouse-wheel-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                <path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/>
+              </svg>
+          </div>
+        </div>
+      </section>
+      <section id="our-services" class="our-services bg-primary">
+        <div class="container f-wrap">
+          <div class="section-desc">
+            <h2 class="section-title" data-i18n-key="services.title">Наші послуги</h2>
+            <div class="section-text">
+              <p data-i18n-key="services.description"></p>
+            </div>
+          </div>
+          <div class="hr-services"></div>
+          <div class="nav-services">
+            <div class="column" id="column-1">
+              <a href="#project-finance-management" class="nav-service-item">
+                <div class="service-desc">
+                  <svg class="service-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <path d="M512 80c0 18-14.3 34.6-38.4 48c-29.1 16.1-72.5 27.5-122.3 30.9c-3.7-1.8-7.4-3.5-11.3-5C300.6 137.4 248.2 128 192 128c-8.3 0-16.4 .2-24.5 .6l-1.1-.6C142.3 114.6 128 98 128 80c0-44.2 86-80 192-80S512 35.8 512 80zM160.7 161.1c10.2-.7 20.7-1.1 31.3-1.1c62.2 0 117.4 12.3 152.5 31.4C369.3 204.9 384 221.7 384 240c0 4-.7 7.9-2.1 11.7c-4.6 13.2-17 25.3-35 35.5c0 0 0 0 0 0c-.1 .1-.3 .1-.4 .2l0 0 0 0c-.3 .2-.6 .3-.9 .5c-35 19.4-90.8 32-153.6 32c-59.6 0-112.9-11.3-148.2-29.1c-1.9-.9-3.7-1.9-5.5-2.9C14.3 274.6 0 258 0 240c0-34.8 53.4-64.5 128-75.4c10.5-1.5 21.4-2.7 32.7-3.5zM416 240c0-21.9-10.6-39.9-24.1-53.4c28.3-4.4 54.2-11.4 76.2-20.5c16.3-6.8 31.5-15.2 43.9-25.5V176c0 19.3-16.5 37.1-43.8 50.9c-14.6 7.4-32.4 13.7-52.4 18.5c.1-1.8 .2-3.5 .2-5.3zm-32 96c0 18-14.3 34.6-38.4 48c-1.8 1-3.6 1.9-5.5 2.9C304.9 404.7 251.6 416 192 416c-62.8 0-118.6-12.6-153.6-32C14.3 370.6 0 354 0 336V300.6c12.5 10.3 27.6 18.7 43.9 25.5C83.4 342.6 135.8 352 192 352s108.6-9.4 148.1-25.9c7.8-3.2 15.3-6.9 22.4-10.9c6.1-3.4 11.8-7.2 17.2-11.2c1.5-1.1 2.9-2.3 4.3-3.4V304v5.7V336zm32 0V304 278.1c19-4.2 36.5-9.5 52.1-16c16.3-6.8 31.5-15.2 43.9-25.5V272c0 10.5-5 21-14.9 30.9c-16.3 16.3-45 29.7-81.3 38.4c.1-1.7 .2-3.5 .2-5.3zM192 448c56.2 0 108.6-9.4 148.1-25.9c16.3-6.8 31.5-15.2 43.9-25.5V432c0 44.2-86 80-192 80S0 476.2 0 432V396.6c12.5 10.3 27.6 18.7 43.9 25.5C83.4 438.6 135.8 448 192 448z"/>
+                  </svg>
+                  <p class="service-txt" data-i18n-key="services.items.finance.title"></p>
+                </div>
+              </a>
+            </div>
+            <div class="column" id="column-2">
+              <a href="#quality-control-of-construction" class="nav-service-item">
+                <div class="service-desc">
+                  <svg class="service-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                    <path d="M48 0C21.5 0 0 21.5 0 48V464c0 26.5 21.5 48 48 48h96V432c0-26.5 21.5-48 48-48s48 21.5 48 48v80h89.9c-6.3-10.2-9.9-22.2-9.9-35.1c0-46.9 25.8-87.8 64-109.2V271.8 48c0-26.5-21.5-48-48-48H48zM64 240c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V240zm112-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H176c-8.8 0-16-7.2-16-16V240c0-8.8 7.2-16 16-16zm80 16c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H272c-8.8 0-16-7.2-16-16V240zM80 96h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16zm80 16c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H176c-8.8 0-16-7.2-16-16V112zM272 96h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H272c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16zM576 272c0-44.2-35.8-80-80-80s-80 35.8-80 80s35.8 80 80 80s80-35.8 80-80zM352 477.1c0 19.3 15.6 34.9 34.9 34.9H605.1c19.3 0 34.9-15.6 34.9-34.9c0-51.4-41.7-93.1-93.1-93.1H445.1c-51.4 0-93.1 41.7-93.1 93.1z"/>
+                  </svg>
+                  <p class="service-txt" data-i18n-key="services.items.qualityControl.title"></p>
+                </div>
+              </a>
+              <a href="#legal-advice-support" class="nav-service-item">
+                <div class="service-desc">
+                  <svg class="service-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512">
+                    <path d="M144 80c0 26.5-21.5 48-48 48s-48-21.5-48-48s21.5-48 48-48s48 21.5 48 48zM0 224c0-17.7 14.3-32 32-32H96c17.7 0 32 14.3 32 32V448h32c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H64V256H32c-17.7 0-32-14.3-32-32z"/>
+                  </svg>
+                  <p class="service-txt" data-i18n-key="services.items.legalAdvice.title"></p>
+                </div>
+              </a>
+            </div>
+            <div class="column" id="column-3">
+              <a href="#execution-geodetic-works" class="nav-service-item">
+                <div class="service-desc">
+                  <svg class="service-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                    <path d="M304 64c0 26.5-21.5 48-48 48s-48-21.5-48-48s21.5-48 48-48s48 21.5 48 48zM9.8 214.8c5.1-12.2 19.1-18 31.4-12.9L60.7 210l22.9-38.1C99.9 144.6 129.3 128 161 128c51.4 0 97 32.9 113.3 81.7l34.6 103.7 79.3 33.1 34.2-45.6c6.4-8.5 16.6-13.3 27.2-12.8s20.3 6.4 25.8 15.5l96 160c5.9 9.9 6.1 22.2 .4 32.2s-16.3 16.2-27.8 16.2H288c-11.1 0-21.4-5.7-27.2-15.2s-6.4-21.2-1.4-31.1l16-32c5.4-10.8 16.5-17.7 28.6-17.7h32l22.5-30L22.8 246.2c-12.2-5.1-18-19.1-12.9-31.4zm82.8 91.8l112 48c11.8 5 19.4 16.6 19.4 29.4v96c0 17.7-14.3 32-32 32s-32-14.3-32-32V405.1l-60.6-26-37 111c-5.6 16.8-23.7 25.8-40.5 20.2S-3.9 486.6 1.6 469.9l48-144 11-33 32 13.7z"/>
+                  </svg>
+                  <p class="service-txt" data-i18n-key="services.items.geodeticWorks.title"></p>                            
+                </div>
+              </a>
+              <a href="#engineering-research" class="nav-service-item">
+                <div class="service-desc">
+                  <svg class="service-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <path d="M352 96c0 14.3-3.1 27.9-8.8 40.2L396 227.4c-23.7 25.3-54.2 44.1-88.5 53.6L256 192h0 0l-68 117.5c21.5 6.8 44.3 10.5 68.1 10.5c70.7 0 133.8-32.7 174.9-84c11.1-13.8 31.2-16 45-5s16 31.2 5 45C428.1 341.8 347 384 256 384c-35.4 0-69.4-6.4-100.7-18.1L98.7 463.7C94 471.8 87 478.4 78.6 482.6L23.2 510.3c-5 2.5-10.9 2.2-15.6-.7S0 501.5 0 496V440.6c0-8.4 2.2-16.7 6.5-24.1l60-103.7C53.7 301.6 41.8 289.3 31.2 276c-11.1-13.8-8.8-33.9 5-45s33.9-8.8 45 5c5.7 7.1 11.8 13.8 18.2 20.1l69.4-119.9c-5.6-12.2-8.8-25.8-8.8-40.2c0-53 43-96 96-96s96 43 96 96zm21 297.9c32.6-12.8 62.5-30.8 88.9-52.9l43.7 75.5c4.2 7.3 6.5 15.6 6.5 24.1V496c0 5.5-2.9 10.7-7.6 13.6s-10.6 3.2-15.6 .7l-55.4-27.7c-8.4-4.2-15.4-10.8-20.1-18.9L373 393.9zM256 128c17.7 0 32-14.3 32-32s-14.3-32-32-32s-32 14.3-32 32s14.3 32 32 32z"/>
+                  </svg>
+                  <p class="service-txt" data-i18n-key="services.items.engineeringResearch.title"></p>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="services">
+            <article id="project-finance-management" class="services-item">
+              <div class="services-item-icon">
+                <svg class="service-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                  <path d="M512 80c0 18-14.3 34.6-38.4 48c-29.1 16.1-72.5 27.5-122.3 30.9c-3.7-1.8-7.4-3.5-11.3-5C300.6 137.4 248.2 128 192 128c-8.3 0-16.4 .2-24.5 .6l-1.1-.6C142.3 114.6 128 98 128 80c0-44.2 86-80 192-80S512 35.8 512 80zM160.7 161.1c10.2-.7 20.7-1.1 31.3-1.1c62.2 0 117.4 12.3 152.5 31.4C369.3 204.9 384 221.7 384 240c0 4-.7 7.9-2.1 11.7c-4.6 13.2-17 25.3-35 35.5c0 0 0 0 0 0c-.1 .1-.3 .1-.4 .2l0 0 0 0c-.3 .2-.6 .3-.9 .5c-35 19.4-90.8 32-153.6 32c-59.6 0-112.9-11.3-148.2-29.1c-1.9-.9-3.7-1.9-5.5-2.9C14.3 274.6 0 258 0 240c0-34.8 53.4-64.5 128-75.4c10.5-1.5 21.4-2.7 32.7-3.5zM416 240c0-21.9-10.6-39.9-24.1-53.4c28.3-4.4 54.2-11.4 76.2-20.5c16.3-6.8 31.5-15.2 43.9-25.5V176c0 19.3-16.5 37.1-43.8 50.9c-14.6 7.4-32.4 13.7-52.4 18.5c.1-1.8 .2-3.5 .2-5.3zm-32 96c0 18-14.3 34.6-38.4 48c-1.8 1-3.6 1.9-5.5 2.9C304.9 404.7 251.6 416 192 416c-62.8 0-118.6-12.6-153.6-32C14.3 370.6 0 354 0 336V300.6c12.5 10.3 27.6 18.7 43.9 25.5C83.4 342.6 135.8 352 192 352s108.6-9.4 148.1-25.9c7.8-3.2 15.3-6.9 22.4-10.9c6.1-3.4 11.8-7.2 17.2-11.2c1.5-1.1 2.9-2.3 4.3-3.4V304v5.7V336zm32 0V304 278.1c19-4.2 36.5-9.5 52.1-16c16.3-6.8 31.5-15.2 43.9-25.5V272c0 10.5-5 21-14.9 30.9c-16.3 16.3-45 29.7-81.3 38.4c.1-1.7 .2-3.5 .2-5.3zM192 448c56.2 0 108.6-9.4 148.1-25.9c16.3-6.8 31.5-15.2 43.9-25.5V432c0 44.2-86 80-192 80S0 476.2 0 432V396.6c12.5 10.3 27.6 18.7 43.9 25.5C83.4 438.6 135.8 448 192 448z"/>
+                </svg>
+              </div>
+              <div class="services-item-content">
+                <h3 class="services-item-header" data-i18n-key="services.items.finance.title">Управління фінансуванням проекту</h3>
+                <ul class="services-item-desc">
+                  <li>
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                      <path d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/>
+                    </svg>
+                    <span class="text" data-i18n-key="services.items.finance.service1"></span>
+                  </li>
+                  <li>
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                      <path d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/>
+                    </svg>
+                    <span class="text" data-i18n-key="services.items.finance.service2"></span>
+                  </li>
+                  <li>
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                      <path d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/>
+                    </svg>
+                    <span class="text" data-i18n-key="services.items.finance.service3"></span>
+                  </li>
+                  <li>
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                      <path d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/>
+                    </svg>
+                    <span class="text" data-i18n-key="services.items.finance.service4"></span>
+                  </li>
+                </ul>
+              </div>
+            </article>
+            <article id="legal-advice-support" class="services-item">
+              <div class="services-item-icon">
+                <svg class="service-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512">
+                  <path d="M144 80c0 26.5-21.5 48-48 48s-48-21.5-48-48s21.5-48 48-48s48 21.5 48 48zM0 224c0-17.7 14.3-32 32-32H96c17.7 0 32 14.3 32 32V448h32c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H64V256H32c-17.7 0-32-14.3-32-32z"/>
+                </svg>
+              </div>
+              <div class="services-item-content">
+                <h3 class="services-item-header" data-i18n-key="services.items.legalAdvice.title">Юридичні консультації та супровід</h3>
+                <ul class="services-item-desc">
+                  <li>
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                      <path d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/>
+                    </svg>
+                    <span class="text" data-i18n-key="services.items.legalAdvice.service1"></span>
+                  </li>
+                  <li>
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                      <path d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/>
+                    </svg>
+                    <span class="text" data-i18n-key="services.items.legalAdvice.service2"></span>
+                  </li>
+                  <li>
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                      <path d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/>
+                    </svg>
+                    <span class="text" data-i18n-key="services.items.legalAdvice.service3"></span>
+                  </li>
+                  <li>
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                      <path d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/>
+                    </svg>
+                    <span class="text" data-i18n-key="services.items.legalAdvice.service4"></span>
+                  </li>
+                </ul>
+              </div>
+            </article>
+            <article id="quality-control-of-construction" class="services-item">
+              <div class="services-item-icon">
+                <svg class="service-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                  <path d="M48 0C21.5 0 0 21.5 0 48V464c0 26.5 21.5 48 48 48h96V432c0-26.5 21.5-48 48-48s48 21.5 48 48v80h89.9c-6.3-10.2-9.9-22.2-9.9-35.1c0-46.9 25.8-87.8 64-109.2V271.8 48c0-26.5-21.5-48-48-48H48zM64 240c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V240zm112-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H176c-8.8 0-16-7.2-16-16V240c0-8.8 7.2-16 16-16zm80 16c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H272c-8.8 0-16-7.2-16-16V240zM80 96h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16zm80 16c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H176c-8.8 0-16-7.2-16-16V112zM272 96h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H272c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16zM576 272c0-44.2-35.8-80-80-80s-80 35.8-80 80s35.8 80 80 80s80-35.8 80-80zM352 477.1c0 19.3 15.6 34.9 34.9 34.9H605.1c19.3 0 34.9-15.6 34.9-34.9c0-51.4-41.7-93.1-93.1-93.1H445.1c-51.4 0-93.1 41.7-93.1 93.1z"/>
+                </svg>
+              </div>
+              <div class="services-item-content">
+                <h3 class="services-item-header" data-i18n-key="services.items.qualityControl.title">Контроль якості будівельних робіт</h3>
+                <ul class="services-item-desc">
+                  <li>
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                      <path d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/>
+                    </svg>
+                    <span class="text" data-i18n-key="services.items.qualityControl.service1"></span>
+                  </li>
+                  <li>
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                      <path d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/>
+                    </svg>
+                    <span class="text" data-i18n-key="services.items.qualityControl.service2"></span>
+                  </li>
+                  <li>
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                      <path d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/>
+                    </svg>
+                    <span class="text" data-i18n-key="services.items.qualityControl.service3"></span>
+                  </li>
+                  <li>
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                      <path d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/>
+                    </svg>
+                    <span class="text" data-i18n-key="services.items.qualityControl.service4"></span>
+                  </li>
+                  <li>
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                      <path d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/>
+                    </svg>
+                    <span class="text" data-i18n-key="services.items.qualityControl.service5"></span>
+                  </li>
+                  <li>
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                      <path d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/>
+                    </svg>
+                    <span class="text" data-i18n-key="services.items.qualityControl.service6"></span>
+                  </li>
+                </ul>
+              </div>
+            </article>
+            <article id="engineering-research" class="services-item">
+              <div class="services-item-icon">
+                <svg class="service-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                  <path d="M352 96c0 14.3-3.1 27.9-8.8 40.2L396 227.4c-23.7 25.3-54.2 44.1-88.5 53.6L256 192h0 0l-68 117.5c21.5 6.8 44.3 10.5 68.1 10.5c70.7 0 133.8-32.7 174.9-84c11.1-13.8 31.2-16 45-5s16 31.2 5 45C428.1 341.8 347 384 256 384c-35.4 0-69.4-6.4-100.7-18.1L98.7 463.7C94 471.8 87 478.4 78.6 482.6L23.2 510.3c-5 2.5-10.9 2.2-15.6-.7S0 501.5 0 496V440.6c0-8.4 2.2-16.7 6.5-24.1l60-103.7C53.7 301.6 41.8 289.3 31.2 276c-11.1-13.8-8.8-33.9 5-45s33.9-8.8 45 5c5.7 7.1 11.8 13.8 18.2 20.1l69.4-119.9c-5.6-12.2-8.8-25.8-8.8-40.2c0-53 43-96 96-96s96 43 96 96zm21 297.9c32.6-12.8 62.5-30.8 88.9-52.9l43.7 75.5c4.2 7.3 6.5 15.6 6.5 24.1V496c0 5.5-2.9 10.7-7.6 13.6s-10.6 3.2-15.6 .7l-55.4-27.7c-8.4-4.2-15.4-10.8-20.1-18.9L373 393.9zM256 128c17.7 0 32-14.3 32-32s-14.3-32-32-32s-32 14.3-32 32s14.3 32 32 32z"/>
+                </svg>
+              </div>
+              <div class="services-item-content">
+                <h3 class="services-item-header" data-i18n-key="services.items.engineeringResearch.title">Інженерні вишукування</h3>
+                <ul class="services-item-desc">
+                  <li>
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                      <path d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/>
+                    </svg>
+                    <span class="text" data-i18n-key="services.items.engineeringResearch.service1"></span>
+                  </li>
+                  <li>
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                      <path d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/>
+                    </svg>
+                    <span class="text" data-i18n-key="services.items.engineeringResearch.service2"></span>
+                  </li>
+                  <li>
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                      <path d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/>
+                    </svg>
+                    <span class="text" data-i18n-key="services.items.engineeringResearch.service3"></span>
+                  </li>
+                </ul>
+              </div>
+            </article>
+            <article id="execution-geodetic-works" class="services-item">
+              <div class="services-item-icon">
+                <svg class="service-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                  <path d="M304 64c0 26.5-21.5 48-48 48s-48-21.5-48-48s21.5-48 48-48s48 21.5 48 48zM9.8 214.8c5.1-12.2 19.1-18 31.4-12.9L60.7 210l22.9-38.1C99.9 144.6 129.3 128 161 128c51.4 0 97 32.9 113.3 81.7l34.6 103.7 79.3 33.1 34.2-45.6c6.4-8.5 16.6-13.3 27.2-12.8s20.3 6.4 25.8 15.5l96 160c5.9 9.9 6.1 22.2 .4 32.2s-16.3 16.2-27.8 16.2H288c-11.1 0-21.4-5.7-27.2-15.2s-6.4-21.2-1.4-31.1l16-32c5.4-10.8 16.5-17.7 28.6-17.7h32l22.5-30L22.8 246.2c-12.2-5.1-18-19.1-12.9-31.4zm82.8 91.8l112 48c11.8 5 19.4 16.6 19.4 29.4v96c0 17.7-14.3 32-32 32s-32-14.3-32-32V405.1l-60.6-26-37 111c-5.6 16.8-23.7 25.8-40.5 20.2S-3.9 486.6 1.6 469.9l48-144 11-33 32 13.7z"/>
+                </svg>
+              </div>
+              <div class="services-item-content">
+                <h3 class="services-item-header" data-i18n-key="services.items.geodeticWorks.title">Виконання геодезичних робіт</h3>
+                <ul class="services-item-desc">
+                  <li>
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                      <path d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/>
+                    </svg>
+                    <span class="text" data-i18n-key="services.items.geodeticWorks.service1"></span>
+                  </li>
+                  <li>
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                      <path d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/>
+                    </svg>
+                    <span class="text" data-i18n-key="services.items.geodeticWorks.service2"></span>
+                  </li>
+                  <li>
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                      <path d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/>
+                    </svg>
+                    <span class="text" data-i18n-key="services.items.geodeticWorks.service3"></span>
+                  </li>
+                  <li>
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                      <path d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/>
+                    </svg>
+                    <span class="text" data-i18n-key="services.items.geodeticWorks.service4"></span>
+                  </li>
+                  <li>
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                      <path d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/>
+                    </svg>
+                    <span class="text" data-i18n-key="services.items.geodeticWorks.service5"></span>
+                  </li>
+                </ul>
+              </div>
+            </article>
+          </div>
+          </div>
+        </div>
+      </section>
+      <section id="photogallery" class="photogallery bg-primary">
+        <div class="container-column">
+          <h2 class="section-title" data-i18n-key="photogallery.title">Фотогалерея</h2>
+          <div class="photogallery-content">
+            <div class="img-column-box">
+              <img src="images/w02.jpg" alt="">
+              <img src="images/w18.jpg" alt="">
+              <img src="images/w14.jpg" alt="">
+              <img src="images/w10.jpg" alt="">
+              <img src="images/w17.jpg" alt="">
+              <img src="images/w01.jpg" alt="">
+            </div>
+            <div class="img-column-box">
+              <img src="images/w15.jpg" alt="">
+              <img src="images/w03.jpg" alt="">
+              <img src="images/w05.jpg" alt="">
+              <img src="images/w24.jpg" alt="">
+              <img src="images/w07.jpg" alt="">
+              <img src="images/w08.jpg" alt="">
+            </div>
+            <div class="img-column-box">
+              <img src="images/w09.jpg" alt="">
+              <img src="images/w11.jpg" alt="">
+              <img src="images/w16.jpg" alt="">
+              <img src="images/w06.jpg" alt="">
+              <img src="images/w19.jpg" alt="">
+              <img src="images/w13.jpg" alt="">
+            </div>
+            <div class="img-column-box">
+              <img src="images/w12.jpg" alt="">
+              <img src="images/w25.jpg" alt="">
+              <img src="images/w23.jpg" alt="">
+              <img src="images/w20.jpg" alt="">
+              <img src="images/w22.jpg" alt="">
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="about-us" class="about-us bg-primary">
+        <div class="container">
+          <div class="about-us-description">
+            <h2 class="section-title" data-i18n-key="aboutUs.title">Про нас</h2>
+            <p class="about-us-text" data-i18n-key="aboutUs.description">
+              TDA Consulting Engineers – команда фахівців з багаторічним досвідом, яка вже встигла зарекомендувати себе на ринку забудовників.
+              Ми надаємо будь-які консультації пов'язані з будівництвом та запропонуємо вам найкращі рішення.
+              Це вплине на якість обʼєкту, допоможе оптимізувати проектні рішення та фінансові показники витрат, 
+              експлуатаційні показники обьектів, як для замовника так і підрядника.
+              Ми завжди відкриті для нових ідей, проектів та співпраці.
+            </p>
+            <h3 class="third-title" data-i18n-key="aboutUs.subtitle">Наші сертифікати</h3>
+            <div class="slider">
+              <img src="images/Dosujy.jpg" class="slide" height="300" width="250" alt=""/>
+              <img src="images/Drokin.jpg" class="slide" height="300" width="250" alt=""/>
+              <img src="images/fidic.jpg" class="slide" height="300" width="250" alt=""/>
+              <img src="images/Jovtobruch.jpg" class="slide" height="300" width="250" alt=""/>
+              <img src="images/Korotinskiy.jpg" class="slide" height="300" width="250" alt=""/>
+              <img src="images/Kovtun.jpg" class="slide" height="300" width="250" alt=""/>
+              <img src="images/smet1.jpg" class="slide" height="300" width="250" alt=""/>
+              <img src="images/smet2.jpg" class="slide" height="300" width="250" alt=""/>
+              <img src="images/smet3.jpg" class="slide" height="300" width="250" alt=""/>
+            </div>
+          </div>
+          <div class="about-us-ilustration"></div>
+        </div>
+      </section>
+      <section id="contact" class="contacts bg-primary">
+        <div class="container">
+          <div class="contacts-content">
+            <div class="contact-us bg-secondary">
+              <div class="item-wrapper">
+                <svg class="item-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                  <path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 256c-35.3 0-64-28.7-64-64s28.7-64 64-64s64 28.7 64 64s-28.7 64-64 64z"/>
+                </svg>
+              </div>
+              <div class="text-info">
+                <h3 class="third-title" data-i18n-key="contacts.col1">Знайти нас</h3>
+                <p>
+                  <span>Україна, 49000 м. Дніпро</span>
+                  <span>пр-кт Дмитра Яворницького 1а</span>
+                  <span>офіси 402 та 403</span>
+                </p> 
+              </div>
+            </div>
+            <div class="contact-us bg-secondary">
+              <div class="item-wrapper">
+                <svg class="item-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                  <path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/>
+                </svg>
+              </div>
+              <div class="text-info">
+                <h3 class="third-title" data-i18n-key="contacts.col2">Зв\'язатись з нами</h3>
+                <span>+380 67 634 04 22</span>
+              </div>
+            </div>
+            <div class="contact-us bg-secondary">
+              <div class="item-wrapper">
+                <svg class="item-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                  <path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/>
+                </svg>
+              </div>
+              <div class="text-info">
+                <h3 class="third-title" data-i18n-key="contacts.col3">Написати нам</h3>
+                <span>contact@tda-consulting.com.ua</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer id="footer" class="footer bg-dark-action">
+        <div class="container">
+          <div class="footer-content">
+            TDA Consulting Engineers © 2023 
+          </div>
+        </div>
+      </footer>
+    </main>
 
-    </div>
+    <script src="js/app.js"></script>
   </body>
 </html>
